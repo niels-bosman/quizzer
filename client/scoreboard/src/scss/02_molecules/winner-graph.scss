@@ -1,0 +1,56 @@
+.m-winner-graph {
+  $self: &;
+
+  background: $color-light-gray;
+  border-radius: $border-radius;
+  padding: 25px 350px;
+  display: flex;
+  justify-content: space-between;
+  height: 350px;
+  margin-bottom: 75px;
+
+  &__place {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 125px;
+    text-align: center;
+
+    &:nth-child(1) {
+      #{$self}__bar {
+        background-color: #C0C0C0;
+      }
+    }
+
+    &:nth-child(2) {
+      #{$self}__bar {
+        background-color: #DAA520;
+      }
+    }
+
+    &:nth-child(3) {
+      #{$self}__bar {
+        background-color: #CD7F32;
+      }
+    }
+  }
+
+  &__medal {
+    font-size: 40px;
+  }
+
+  &__bar {
+    border-radius: $border-radius;
+    height: 100%;
+    margin: 20px 0;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 22px;
+
+    &--first {
+      background-color: $color-primary;
+    }
+  }
+}

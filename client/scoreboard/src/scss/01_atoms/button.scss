@@ -1,0 +1,44 @@
+.a-button {
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 35px;
+  transition: transform .3s ease-in-out, background-color .1s ease-in-out, box-shadow .3s ease-in-out;
+  border-radius: $border-radius;
+
+  @media screen and (max-width: 678px) {
+    font-size: 14px;
+    padding: 9px 25px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    box-shadow: $box-shadow-primary rgba($color-primary, .5);
+
+    &:focus {
+      background-color: darken($color-primary, 5%);
+    }
+
+    &:hover {
+      box-shadow: $box-shadow-primary-hover rgba($color-primary, .5);
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    box-shadow: $box-shadow-primary rgba($color-secondary, .5);
+
+    &:focus {
+      background-color: darken($color-secondary, 5%);
+    }
+
+    &:hover {
+      box-shadow: $box-shadow-primary-hover rgba($color-secondary, .5);
+    }
+  }
+}

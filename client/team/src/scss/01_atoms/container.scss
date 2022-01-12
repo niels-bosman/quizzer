@@ -1,0 +1,14 @@
+.a-container {
+  $self: &;
+  $grid-row-width: 1200px;
+  $grid-gutter: 30px;
+
+  margin: 0 auto;
+  max-width: $grid-row-width;
+
+  &--gutter {
+    max-width: $grid-row-width + $grid-gutter;
+    padding-left: ($grid-gutter / 2);
+    padding-right: ($grid-gutter / 2);
+  }
+}

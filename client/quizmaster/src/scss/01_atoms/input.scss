@@ -1,0 +1,31 @@
+.a-input {
+  border-radius: $border-radius;
+  padding: 10px 10px;
+  border: 1px solid $color-secondary;
+  box-shadow: $box-shadow-primary rgba($color-secondary, .5);
+  margin-top: 10px;
+  transition: .3s ease-in-out all;
+  max-width: 300px;
+
+  &:focus {
+    outline: none;
+    border-color: darken($color-secondary, 25%);
+    box-shadow: $box-shadow-primary-hover rgba($color-secondary, .7);
+  }
+
+  &--error {
+    border-color: $color-warning;
+    box-shadow: $box-shadow-primary rgba($color-warning, .5);
+
+    &:focus {
+      border-color: $color-warning;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+}

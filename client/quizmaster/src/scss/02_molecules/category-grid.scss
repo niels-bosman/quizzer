@@ -1,0 +1,26 @@
+.m-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  &__item {
+    user-select: none;
+    background-color: $color-secondary;
+    border-radius: $border-radius;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    box-shadow: $box-shadow-primary rgba($color-secondary, .5);
+    transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out;
+
+    &--selected {
+      background-color: $color-primary;
+      box-shadow: $box-shadow-primary-hover rgba($color-primary, .5);
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+  }
+}

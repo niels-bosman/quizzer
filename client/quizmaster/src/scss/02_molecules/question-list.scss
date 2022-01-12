@@ -1,0 +1,51 @@
+.m-question-list {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0;
+
+  &__item {
+    display: flex;
+    padding: 20px 0;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: solid 1px #ebebeb;
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: solid 2px #ebebeb;
+    background-color: transparent;
+    margin-right: 20px;
+    position: relative;
+
+    &:after {
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      background-color: transparent;
+      inset: 50% 50%;
+      width: 14px;
+      height: 14px;
+      transform: translate(-50%, -50%);
+      transition: .2s ease-in-out all;
+    }
+
+    &--checked {
+      &:after {
+        background-color: $color-primary;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__question {
+    margin: 0;
+    align-self: center;
+  }
+}

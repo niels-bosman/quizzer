@@ -1,0 +1,21 @@
+.m-language-selection {
+  display: flex;
+
+  &__item {
+    opacity: 20%;
+    cursor: pointer;
+    transition: .3s ease-in-out opacity;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &--active {
+      opacity: 100%;
+    }
+  }
+
+  &__image {
+    max-width: 50px;
+  }
+}

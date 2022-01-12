@@ -1,0 +1,54 @@
+.m-answer-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__team {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__bar {
+    background: $color-secondary-light;
+    box-shadow: $box-shadow-primary $color-secondary-light;
+    padding: 10px 20px;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s ease-in-out all;
+
+    &--correct {
+      background-color: lighten($color-success, 30%);
+      box-shadow: $box-shadow-primary lighten($color-success, 30%);
+    }
+
+    &--incorrect {
+      background-color: lighten($color-warning, 20%);
+      box-shadow: $box-shadow-primary lighten($color-warning, 20%);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    margin: 0 -7.5px;
+  }
+
+  &__icon {
+    font-size: 22px;
+    padding: 0 7.5px;
+    cursor: pointer;
+
+    &--check {
+      color: $color-success;
+    }
+
+    &--cross {
+      color: $color-warning;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.m-result {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    width: 700px;
+    color: lighten($color-black, 10%);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      border-bottom: solid lightgray 1px;
+    }
+  }
+
+  &__part {
+    min-width: 200px;
+  }
+}
